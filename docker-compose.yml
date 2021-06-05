@@ -1,0 +1,53 @@
+version: '3'
+services:
+    dev_container:
+        image: node14-lein:local
+        container_name: dev_container
+        build:
+            context: .
+            dockerfile: "docker-builds/base/Dockerfile"
+            args:
+                BUILD_ENV: "dev"
+        networks:
+            - dev_network
+        volumes:
+            - vol_node_modules:/build/node_modules
+            - vol_m2_cache:/root/.m2
+            - ./:/build
+        ports:
+            - 3000:3000
+        environment:
+            BUILD_ENV: "dev"
+
+    ganache:
+        image: 0xorg/ganache-cli:latest
+        container_name: ganache
+        networks:
+        - dev_network
+        ports:
+            - 8545:8545
+            - 8549:8549
+        # environment:
+            # CHAIN_ID: 1337
+            # NETWORK_ID: 1337
+
+    ipfs:
+        image: ipfs/go-ipfs:latest
+        container_name: ipfs
+        volumes:
+            - vol_ipfs_data:/data/ipfs
+        networks:
+            - dev_network
+        ports:
+            - 4001:4001/tcp
+            - 4001:4001/udp
+            - 5001:5001
+            - 8080:8080
+
+networks:
+    dev_network:
+
+volumes:
+    vol_node_modules:
+    vol_m2_cache:
+    vol_ipfs_data:
