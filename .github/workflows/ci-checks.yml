@@ -45,7 +45,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: mkdir -p /root/.config/truffle/
+      - run: mkdir -p ~/.config/truffle/
       - run: npm i -g yarn
       - run: yarn deps
       - run: yarn lint
