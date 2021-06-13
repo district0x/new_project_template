@@ -30,10 +30,10 @@ dev-image-no-cache: ## Builds dev image
 
 # All images
 build-images: ## Build all containers in docker-compose file
-	docker-compose -p ${PROJECT_NAME} build --parallel
+	DOCKER_BUILDKIT=1 docker-compose -p ${PROJECT_NAME} build --parallel
 
 build-images-no-cache: # Build base docker image with node11.14, yarn, clojure, lein, truffle
-	docker-compose -p ${PROJECT_NAME} build --parallel --pull --no-cache
+	DOCKER_BUILDKIT=1 docker-compose -p ${PROJECT_NAME} build --parallel --pull --no-cache
 
 # RUN CONTAINERS
 start-containers: dev-image ## Build and start containers ((ipfs, ganache, dev container)
