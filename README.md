@@ -1,41 +1,32 @@
-<div align="left">
-    <a href="https://discord.com/invite/sS2AWYm"><img alt="District0x Discord server" src="https://img.shields.io/discord/356854079022039062?label=district0x&logo=discord"></a>
-    <a href="LICENSE"><img alt="LICENSE" src="https://img.shields.io/github/license/district0x/new_project_template"></a>
-    <a href="http://makeapullrequest.com"><img alt="pull requests welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat"></a></p>
-</div>
+## Why I'm So Excited About This Project
+I believe this application is a great opportunity to move crypto into the real, physical world!
 
-# District0x project template
+## The Idea Takes Shape
+ACCOLADE would be a governance token for the POAP Community Registry.  The Registry will be a collection of perpetually available POAPs created and submitted by users to the Registry and curated by ACCOLADEs holders.  Initial distribution of ACCOLADE token would be up for debate, but likely to be largely revolved around distribution to current POAP holders.
 
-This repository contains files, configs, and scripts to quickly get started with development of [District0x](https://district0x.io) projects. To start a new project simply use this template repo as shown in [this document](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-repository-from-a-template)
+## The Mechanics
+POAP.xyz team and project already have available a mechanism for creatings POAPs.  Its mostly a hosted front end with the NFT portion being rather light and trivial.  Unfortunately this complicates things a bit from the district side, as there is no frontend.  It should all be onchain or on ipfs. The POAP logo, a 500x500px round logo, would be hosted on ipfs with a reference to that ipfs address as part of the NFT.  Likely the same would be said of the Description and metadata, though the metadata may be small enough to be part of the NFT data.
 
-# development
+## Why a Token Curated Registry
+A catalog of available POAPs already generated could be very useful for many reasons. I will not list them all here but I will give a few examples as idea starters:
+1. Pokemon-go style POAP collection. In a new city? Pull up the POAP-GO game (yet to be done, who wants to take that on?!) and view available POAPs near you.  Great way to learn a new city or even learn more about your own.
+2. Meetup groups available only to local members identified by their owned POAPs.  Exclusivity is not guaranteed since anyone can mint a POAP, but it could be an easy way to get a starter collection going.
+3. Social Media (think instagram for one) style updates and history. With EPNS (Eth Push Notification Service) users could follow friends by their eth address and get notified when a new POAP is received. Imagine visiting the Leaning Tower of Pisa and snapping that infamous selfie, nabbing the Leaning Tower of Pisa POAP and forever cementing your selfie to that NFT via ipfs.  Meanwhile, your soon to be jealous friends back home receive a push notification to their phone that their buddy GraspOnCrypto just got a new Life Achievement Unlock (POAP) and bam, there's my instaPOAP post.  Take that further, looking back at memories could be as easy as visiting the scan.poap.xyz and reminiscing about all the memories by looking at your POAPs available.
 
-This is an open-source project and contributions, be it a new issue or pull request, are always welcome. You can find some good advice on how to get started on [github's guide](https://github.com/github/docs/blob/main/CONTRIBUTING.md)
+NOW! Why a TCR - I know, i really digressed - why a TCR? If you have a registry of available stock, whatever that stock is, someone needs to maintain that. Store owners maintain their stock of groceries, librarians of their books, so who maintains a community database owned by nobody but by everybody? The community does.  So in order to prevent abuse, such as store owners creating POAPs in the registry for their store (real world spam) to muggers creating fake ones in easy to mug parts of town (real world phishing), we must create a mechanism which encourages good behavior while punishing bad.  thus a TCR.
 
-## Technical stack
+## Some other ideas and caveats
+POAP combined with EPNS and a curated list of available POAPs could be an early onset kickstart of web3 social media.  With EPNS users could sign up to get push notifications when addresses they wished to follow were granted a new POAP.  Likewise they could use the POAP mobile app to view the POAP, the associated description and picture, just like receiving a notification via twitter, facebook, instagram or any other social app, when a friend or follower has a new event.  
 
-District0x projects usually rely on the following tech
+The ACCOLADE community could provide a great seeded database of events for users to follow, in order to not be notified any time someone spammed the network with a random distribution of POAPs in order to trigger alerts or notifications in a spammy way.
 
--   [0x Protocol](https://blog.0xproject.com/a-beginners-guide-to-0x-81d30298a5e0)
--   [Clojurescript](https://clojurescript.org/)
--   [d0x-INFRA](https://github.com/district0x/d0x-INFRA)
--   [Docker-compose](https://docs.docker.com/compose/reference/)
--   [Docker](https://docs.docker.com/get-started/)
--   [Ganache-cli](https://github.com/trufflesuite/ganache-cli)
--   [Github actions](https://docs.github.com/en/actions)
--   [GraphQL](https://graphql.org/)
--   [IPFS](https://docs.ipfs.io/)
--   [Nodejs](https://nodejs.org/en/about/)
--   [Proxy Contracts in Solidity](https://blog.zeppelin.solutions/proxy-libraries-in-solidity-79fbe4b970fd)
--   [re-mount](https://github.com/district0x/d0x-INFRA/blob/master/re-mount.md)
--   [Solidity](http://solidity.readthedocs.io/en/develop/)
--   [Token Curated Registries (TCR)](https://medium.com/@ilovebagels/token-curated-registries-1-0-61a232f8dac7)
+## Road Map
+Stage 1: Create a District0x registry proposal  
+Stage 2: Create a marketplace for a TCR. I anticipate this originally being a clone of MemeFactory with any necessary modifications.  
+Stage 3: Integrate marketplace with xDai chain for POAP discovery.  
+Stage 4: Tokenomics comes into play. Create ACCOLADE token and distribute 100% of tokens to community according to tokenomics TBD (current POAP holders? by # of POAPs? by oldest POAP? Discussions required!)  
+Stage 5: Work with POAP team to integrate the 'marketplace' as a repository of available POAPs for users.
 
-# Github Actions CI
-
-There are several CI jobs build with Github Actions, that perform various checks for code in the repository. Job files live under `.github/workflows` folder.
-
-## Build and run locally
-
-To facilitate development this repository features [Makefile](Makefile) that helps to automate lots of tasks. To list available commands simply run `make help`. Here's a good tutorial on makefiles https://makefiletutorial.com/.
-There's also `docker-compose.yml` file that ensures necessary services, network and volumes are up and running locally. Please note that for different projects both makefiles and ci jobs may require modifications.
+## Final Thoughts
+The idea for this project is not to create a dApp, or frontend components for end users.  Ideally this will be a DAOcentric Token Curated repository of POAPs. This would be used to keep a single location for users to find valued (not monetary, but usefulness) POAPs without having to sift through any spam or useless POAPs.  
+I see it being similar to reddit where the community upvotes and downvotes posts.  A user can submit a POAP to the registry by staking ACCOLADE - which would be forfeit if the community rejects it.  Similarly DAO members can upvote (stake ACCOLADE in favor) on a POAP submitted to the registry, or downvote (stake ACCOLADE against).  The fine details of the tokenomics is yet to be determined and would likely require lots of discussions of game theory. 
