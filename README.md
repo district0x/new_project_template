@@ -19,3 +19,14 @@ NOW! Why a TCR - I know, i really digressed - why a TCR? If you have a registry 
 POAP combined with EPNS and a curated list of available POAPs could be an early onset kickstart of web3 social media.  With EPNS users could sign up to get push notifications when addresses they wished to follow were granted a new POAP.  Likewise they could use the POAP mobile app to view the POAP, the associated description and picture, just like receiving a notification via twitter, facebook, instagram or any other social app, when a friend or follower has a new event.  
 
 The ACCOLADE community could provide a great seeded database of events for users to follow, in order to not be notified any time someone spammed the network with a random distribution of POAPs in order to trigger alerts or notifications in a spammy way.
+
+## Road Map
+Stage 1: Create a District0x registry proposal  
+Stage 2: Create a marketplace for a TCR. I anticipate this originally being a clone of MemeFactory with any necessary modifications.  
+Stage 3: Integrate marketplace with xDai chain for POAP discovery.  
+Stage 4: Tokenomics comes into play. Create ACCOLADE token and distribute 100% of tokens to community according to tokenomics TBD (current POAP holders? by # of POAPs? by oldest POAP? Discussions required!)  
+Stage 5: Work with POAP team to integrate the 'marketplace' as a repository of available POAPs for users.
+
+## Final Thoughts
+The idea for this project is not to create a dApp, or frontend components for end users.  Ideally this will be a DAOcentric Token Curated repository of POAPs. This would be used to keep a single location for users to find valued (not monetary, but usefulness) POAPs without having to sift through any spam or useless POAPs.  
+I see it being similar to reddit where the community upvotes and downvotes posts.  A user can submit a POAP to the registry by staking ACCOLADE - which would be forfeit if the community rejects it.  Similarly DAO members can upvote (stake ACCOLADE in favor) on a POAP submitted to the registry, or downvote (stake ACCOLADE against).  The fine details of the tokenomics is yet to be determined and would likely require lots of discussions of game theory. 
